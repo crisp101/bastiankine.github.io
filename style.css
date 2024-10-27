@@ -160,7 +160,8 @@ border: 5px inset #8fd1f7;
   .list-space{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin: 0 10rem 0;
+    margin: 10rem 10rem 4rem;
+    
     
   }
   .list-space h2{
