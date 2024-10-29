@@ -17,13 +17,27 @@ h1,h2,h3{
     font-weight: bold;
    
 }
+
 h1{
     color: #154161;
     font-style: italic;
     text-align: center;
 }
+#ubi-icon, #kine-icon, #num-icon{ 
+    width: 30px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .contacto{
+    border-top: 1px black dotted;
+  }
 
-.principal-tittle{
+@media (min-width: 768px) {
+  ul{
+    font-size: 1.5rem;
+  }
+  
+  .principal-tittle{
 
     margin-bottom: 10px;
     -webkit-box-shadow: 0px 18px 35px -18px rgba(217,217,224,1);
@@ -62,8 +76,7 @@ flex-direction: column;
 
 .nombre-perfil{
     border-right: 1px  black dotted;
-    
-    
+    text-align: center;
 }
 
 .perfil-info{
@@ -75,9 +88,18 @@ flex-direction: column;
     grid-template-columns: repeat(3,1fr);
  }
 
+
+
  /*MAIN*/
 
- .main-title{
+  .ubicacion,.kinesiologo,.num-contacto{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .main-title{
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -110,20 +132,14 @@ border: 5px inset #8fd1f7;
     font-size: 1rem;
     text-align: justify;
   }
+
+
+
   
-  /* Media query para pantallas pequeñas (menos de 768px) */
-  @media (max-width: 767px) {
-    .contenedor {
-        grid-template-columns: repeat(2,1fr);
-        
-      grid-gap: 5px;
-      padding: 10px;
-      margin: 0 5rem 0;
-    }
-  }
+ 
   
   /* Media query para pantallas medianas (entre 768px y 1024px) */
-  @media (min-width: 768px) {
+  
     .contenedor {
         grid-template-columns: repeat(3,1fr);
       grid-gap: 10px;
@@ -178,3 +194,106 @@ border: 5px inset #8fd1f7;
   }
 }
 
+
+ /* Media query para pantallas pequeñas (menos de 768px) */
+ @media (max-width: 767px) {
+  .contenedor {
+      grid-template-columns: repeat(2,1fr);
+      
+    grid-gap: 5px;
+    padding: 10px;
+    margin: 0 5rem 0;
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+  .nombre-perfil{
+    display:flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    text-transform: uppercase;
+    
+  }
+  .nombre-perfil h2{
+    padding-top: 1.5rem;
+  }
+
+  
+  .imagen-perfil img{
+    width: 100%;
+  }
+
+  .perfil-info{
+    padding: 0 2rem;
+    text-align: justify;
+    font-size: 1.5rem;
+  }
+   
+  .contacto{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .main-title-1 ,.main-title-2 {
+    
+    width: 400px;
+    justify-content: space-between;
+   
+    margin: 2rem auto;
+    display: block;
+    border-radius: 10px 0px 10px 0px;
+-moz-border-radius: 10px 0px 10px 0px;
+-webkit-border-radius: 10px 0px 10px 0px;
+border: 5px inset #8fd1f7;
+
+    background-color: white;
+  
+ }
+  
+ .contenedor{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 0;
+  margin: 0 2rem 0;
+
+
+ }
+  #item-1 ,#item-2 ,#item-3,#item-4,#item-5,#item-6,#item-7,#item-8,#item-9{
+
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 90%;
+    height:50px;
+  }
+    .list-space{
+    display: grid;
+   
+
+  }
+.list-space{
+  display: grid; 
+  margin: 5rem 5rem 0;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 50px;
+  grid-template-areas: 
+    "box-list-1 box-list-2 ."
+    "box-list-3 . ."
+    ". . ."; 
+}
+.box-list-1 { grid-area: box-list-1; }
+.box-list-2 { grid-area: box-list-2; }
+.box-list-3 { grid-area: box-list-3; }
+
+ .box-list-2 h2{
+   text-align: center;
+ }
+}
